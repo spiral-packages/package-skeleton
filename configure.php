@@ -158,8 +158,6 @@ writeln("Namespace  : {$vendorNamespace}\\{$className}");
 writeln("Class name : {$className}");
 writeln("---");
 writeln("Packages & Utilities");
-writeln("Use PhpCsFixer       : " . ($usePhpCsFixer ? 'yes' : 'no'));
-writeln("Use Larastan/PhpStan : " . ($usePhpStan ? 'yes' : 'no'));
 writeln("Use Auto-Changelog   : " . ($useUpdateChangelogWorkflow ? 'yes' : 'no'));
 writeln('------');
 
@@ -192,7 +190,7 @@ foreach ($files as $file) {
         str_contains($file, determineSeparator('src/Skeleton.php')) => rename($file, determineSeparator('./src/' . $className . '.php')),
         str_contains($file, determineSeparator('src/SkeletonBootloader.php')) => rename($file, determineSeparator('./src/' . $className . 'Bootloader.php')),
         str_contains($file, determineSeparator('src/Commands/SkeletonCommand.php')) => rename($file, determineSeparator('./src/Commands/' . $className . 'Command.php')),
-        str_contains($file, determineSeparator('Config/SkeletonConfig.php')) => rename($file, determineSeparator('./config/' . $className . 'Config.php')),
+        str_contains($file, determineSeparator('Config/SkeletonConfig.php')) => rename($file, determineSeparator('./src/Config/' . $className . 'Config.php')),
         str_contains($file, 'README.md') => remove_readme_paragraphs($file),
         default => [],
     };
