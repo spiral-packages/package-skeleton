@@ -188,7 +188,7 @@ foreach ($files as $file) {
 
     match (true) {
         str_contains($file, determineSeparator('src/Skeleton.php')) => rename($file, determineSeparator('./src/' . $className . '.php')),
-        str_contains($file, determineSeparator('src/SkeletonBootloader.php')) => rename($file, determineSeparator('./src/' . $className . 'Bootloader.php')),
+        str_contains($file, determineSeparator('src/Bootloader/SkeletonBootloader.php')) => rename($file, determineSeparator('./src/Bootloader/' . $className . 'Bootloader.php')),
         str_contains($file, determineSeparator('src/Commands/SkeletonCommand.php')) => rename($file, determineSeparator('./src/Commands/' . $className . 'Command.php')),
         str_contains($file, determineSeparator('Config/SkeletonConfig.php')) => rename($file, determineSeparator('./src/Config/' . $className . 'Config.php')),
         str_contains($file, 'README.md') => remove_readme_paragraphs($file),
