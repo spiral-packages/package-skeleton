@@ -14,5 +14,6 @@ class SkeletonCommand extends Command
 
     public function perform(): int
     {
+        return self::SUCCESS;
     }
 }
