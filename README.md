@@ -13,6 +13,16 @@ This repo can be used to scaffold a Spiral Framework package. Follow these steps
 <!--/delete-->
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
+
+## Requirements
+
+Make sure that your server is configured with following PHP version and extensions:
+
+- PHP 8.0+
+- Spiral framework 2.9+
+
+
+ 
 ## Installation
 
 You can install the package via composer:
@@ -20,6 +30,18 @@ You can install the package via composer:
 ```bash
 composer require :vendor_slug/:package_slug
 ```
+
+After package install you need to register bootloader from the package.
+
+```php
+protected const LOAD = [
+    // ...
+    \VendorName\Skeleton\Bootloader\SkeletonBootloader::class,
+];
+```
+
+> Note: if you are using [`spiral-packages/bootloaders-discover`](https://github.com/spiral-packages/bootloaders-discover), 
+> you don't need to register bootloader by yourself.
 
 ## Testing
 
