@@ -1,7 +1,8 @@
 # :package_description
 
+[![PHP](https://img.shields.io/packagist/php-v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/run-tests?label=tests)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/run-tests?label=tests&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
 <!--delete-->
 ---
@@ -40,7 +41,7 @@ protected const LOAD = [
 ];
 ```
 
-> Note: if you are using [`spiral-packages/bootloaders-discover`](https://github.com/spiral-packages/bootloaders-discover), 
+> Note: if you are using [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer), 
 > you don't need to register bootloader by yourself.
 
 ## Testing
