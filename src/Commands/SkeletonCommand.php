@@ -8,7 +8,7 @@ use Spiral\Console\Command;
 
 class SkeletonCommand extends Command
 {
-    protected const NAME = 'skeleton';
+    protected const SIGNATURE = 'skeleton {argument : Argument description} {--o|option : Option description}';
     protected const DESCRIPTION = 'My command';
     protected const ARGUMENTS = [];
 

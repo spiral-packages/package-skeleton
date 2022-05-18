@@ -19,18 +19,19 @@ class SkeletonBootloader extends Bootloader
         ConsoleBootloader::class
     ];
 
-    public function __construct(private ConfiguratorInterface $config)
-    {
+    public function __construct(
+        private readonly ConfiguratorInterface $config
+    ) {
     }
 
-    public function boot(Container $container, ConsoleBootloader $console): void
+    public function init(Container $container, ConsoleBootloader $console): void
     {
         $this->initConfig();
 
         $console->addCommand(Commands\SkeletonCommand::class);
     }
 
-    public function start(Container $container): void
+    public function boot(Container $container): void
     {
     }
 

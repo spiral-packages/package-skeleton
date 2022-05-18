@@ -19,11 +19,11 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 
 Make sure that your server is configured with following PHP version and extensions:
 
-- PHP 8.0+
-- Spiral framework 2.9+
+- PHP 8.1+
+- Spiral framework 3.0+
 
 
- 
+
 ## Installation
 
 You can install the package via composer:
@@ -41,7 +41,7 @@ protected const LOAD = [
 ];
 ```
 
-> Note: if you are using [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer), 
+> Note: if you are using [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer),
 > you don't need to register bootloader by yourself.
 
 ## Testing

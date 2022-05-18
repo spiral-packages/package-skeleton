@@ -9,5 +9,5 @@ use Spiral\Core\InjectableConfig;
 final class SkeletonConfig extends InjectableConfig
 {
     public const CONFIG = 'skeleton';
-    protected $config = [];
+    protected array $config = [];
 }
