@@ -41,7 +41,8 @@ protected const LOAD = [
 ];
 ```
 
-> Note: if you are using [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer), 
+> **Note**
+> if you are using [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer), 
 > you don't need to register bootloader by yourself.
 
 ## Testing
