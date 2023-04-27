@@ -11,20 +11,18 @@ use VendorName\Skeleton\Commands;
 use VendorName\Skeleton\Config\SkeletonConfig;
 use Spiral\Console\Bootloader\ConsoleBootloader;
 
-class SkeletonBootloader extends Bootloader
+final class SkeletonBootloader extends Bootloader
 {
     protected const BINDINGS = [];
     protected const SINGLETONS = [];
-    protected const DEPENDENCIES = [
-        ConsoleBootloader::class
-    ];
+    protected const DEPENDENCIES = [];
 
     public function __construct(
         private readonly ConfiguratorInterface $config
     ) {
     }
 
-    public function init(Container $container, ConsoleBootloader $console): void
+    public function init(ConsoleBootloader $console): void
     {
         $this->initConfig();
 
